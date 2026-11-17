@@ -9,6 +9,11 @@
         content="Bienvenido a Atelier Moka, una cafetería acogedora en Estepona donde disfrutar del café y los pequeños momentos sin prisa.">
     <link rel="icon" href="favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Noticias de Atelier Moka" href="noticias.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Zeyada&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
@@ -16,7 +21,7 @@
 
     <header>
         <a href="index.html" class="logo">
-            <img src="imagenes/logo.png" alt="Logotipo de Atelier Moka" width="100">
+            <img src="imagenes/logosvg.svg" alt="Logotipo de Atelier Moka" width="100">
             <span>Atelier Moka</span>
         </a>
 
@@ -28,143 +33,108 @@
         </nav>
     </header>
 
+
     <main>
 
-        <section>
-            <h1>El placer de ir sin prisa</h1>
+        <!-- PORTADA PRINCIPAL -->
+        <section class="portada">
+            <img src="imagenes/interior.webp" alt="Interior acogedor de una cafetería">
 
-            <p>Un espacio pensado para disfrutar los pequeños momentos del día</p>
-
-
-            <img src="imagenes/interior.jpg" alt="Interior acogedor de una cafetería" width="1000">
+            <div class="texto-portada">
+                <h1 class="frasedestacada">El placer de ir sin prisa</h1>
+                <p>Un espacio pensado para disfrutar los pequeños momentos del día</p>
+            </div>
         </section>
 
-        <section>
+        <!-- ESENCIA TARJETAS -->
+        <section class="esencia">
             <h2>Descubre nuestra esencia</h2>
 
-            <ul>
-                <li>Cafés preparados con cuidado.</li>
-                <li>Bebidas frías y refrescantes.</li>
-                <li>Desayunos para empezar bien el día.</li>
-                <li>Dulces para darte un pequeño capricho.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>¿Echamos un vistazo? </h2>
-
-            <div class="video">
-                <video autoplay muted loop controls width="300">
-                    <source src="videos/videoicedlatte.mp4" type="video/mp4">
-                    Tu navegador no puede reproducir este vídeo.
-                </video>
-                <p>Un café para disfrutar sin prisa.</p>
-            </div>
-
-            <div class="video">
-                <video autoplay muted loop controls width="300">
-                    <source src="videos/videocroissant.mp4" type="video/mp4">
-                    Tu navegador no puede reproducir este vídeo.
-                </video>
-                <p>Pequeños caprichos dulces.</p>
-            </div>
-
-            <div class="foto">
-                <img src="imagenes/interiorbarra.jpg" alt="Interior acogedor de una cafetería" width="300">
-                <p>Un espacio para desconectar.</p>
-            </div>
-
-            <div class="video">
-                <video autoplay muted loop controls width="300">
-                    <source src="videos/barista.mp4" type="video/mp4">
-                    Tu navegador no puede reproducir este vídeo.
-                </video>
-                <p>El arte de preparar cada café.</p>
-            </div>
-        </section>
-
-
-
-        <section>
-            <h2>Encuentra tu momento</h2>
-
-            <p>
-                Elige cómo quieres disfrutar
-            </p>
-
-            <ul>
+            <ul class="tarjetas-esencia">
                 <li>
-                    <strong>Para empezar el día</strong>
-                    un cappuccino cremoso 
+                    <h3>Cafés preparados con cuidado</h3>
+                    <p>Cada café se elabora con atención para disfrutar de todo su aroma y sabor.</p>
                 </li>
+
                 <li>
-                    <strong>Para refrescarte</strong>
-                    descubre nuestro matcha frío
+                    <h3>Bebidas frías y refrescantes</h3>
+                    <p>Opciones frescas para acompañarte en cualquier momento del día.</p>
                 </li>
+
                 <li>
-                    <strong>Para darte un capricho</strong>
-                    disfruta de nuestra selección de repostería
+                    <h3>Desayunos para empezar bien el día</h3>
+                    <p>Una forma agradable de comenzar la mañana con algo rico.</p>
+                </li>
+
+                <li>
+                    <h3>Dulces para darte un pequeño capricho</h3>
+                    <p>Una selección de dulces para disfrutar de esos pequeños placeres.</p>
                 </li>
             </ul>
         </section>
 
-        <section>
-            <h2>Nos adaptamos a tus gustos</h2>
+        <!-- VÍDEOS E IMÁGENES -->
 
-            <table>
-                <caption>Algunas de nuestras especialidades</caption>
+        <!-- VÍDEOS E IMÁGENES -->
+        <section class="vistazo">
+            <h2>¿Echamos un vistazo?</h2>
 
-                <thead>
-                    <tr>
-                        <th>Categoría</th>
-                        <th>Opciones</th>
-                    </tr>
-                </thead>
+            <div class="galeria">
 
-                <tbody>
-                    <tr>
-                        <td>Cafés</td>
-                        <td>Espresso, cappuccino y latte</td>
-                    </tr>
+                <div class="elemento-galeria">
+                    <video autoplay muted loop controls poster="imagenes/postericedlatte.png">
+                        <source src="videos/videoicedlatte.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este vídeo.
+                    </video>
+                    <p>Un café para disfrutar sin prisa</p>
+                </div>
 
-                    <tr>
-                        <td>Bebidas frías</td>
-                        <td>Matcha frío y bebidas refrescantes</td>
-                    </tr>
+                <div class="elemento-galeria">
+                    <video autoplay muted loop controls poster="imagenes/postercroissant.png">
+                        <source src="videos/videocroissant.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este vídeo.
+                    </video>
+                    <p>Pequeños caprichos dulces</p>
+                </div>
 
-                    <tr>
-                        <td>Desayunos</td>
-                        <td>Tostadas y croissants</td>
-                    </tr>
+                <div class="elemento-galeria">
+                    <img src="imagenes/interiorbarra.jpg" alt="Interior de la barra de Atelier Moka">
+                    <p>Un espacio para desconectar</p>
+                </div>
 
-                    <tr>
-                        <td>Repostería</td>
-                        <td>Cheesecake, brownie y croissant suprême</td>
-                    </tr>
-                </tbody>
-            </table>
+                <div class="elemento-galeria">
+                    <video autoplay muted loop controls poster="imagenes/posterbarista.png">
+                        <source src="videos/barista.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este vídeo.
+                    </video>
+                    <p>El arte de preparar cada café</p>
+                </div>
+
+            </div>
         </section>
-
 
     </main>
 
+
     <footer>
-        <p>Atelier Moka · El placer de ir sin prisa</p>
+        <p class="nombre-footer">Atelier Moka · El placer de ir sin prisa</p>
+
         <p>Estepona, Málaga</p>
 
-        <p>
+        <p class="licencias">
             Fotografías obtenidas de
-            <a href="https://www.pexels.com/">Pexels</a>
+            <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a>
             y utilizadas bajo la
-            <a href="https://www.pexels.com/license/">Licencia de Pexels</a>.
+            <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">Licencia de Pexels</a>
         </p>
 
         <p>
             <a href="noticias.xml">Consultar noticias RSS</a>
         </p>
 
-        <p>© 2026 Atelier Moka. Proyecto educativo.</p>
+        <p class="copyright">© 2026 Atelier Moka</p>
     </footer>
+
 
 </body>
 
