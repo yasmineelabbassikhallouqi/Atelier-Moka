@@ -1,0 +1,1094 @@
+/* 1. CONFIGURACIÓN GENERAL */
+/* Colores, fuentes y estilos básicos de la web. */
+
+:root {
+    --color-principal: #4e562f;
+    --color-principalosc: #30351d;
+    --color-texto: #252525;
+    --color-fondo: #EFF1ED;
+    --color-fondo2: #e4e5e3;
+    --color-secundario: #BCBD8B;
+    --color-acento: #766153;
+    --color-acento2: #c4b8b0;
+    --color-blanco: #ffffff;
+    --color-tarjeta: #fefae0;
+
+    --fuente-principal: "Manrope", system-ui, Arial, sans-serif;
+    --fuente-secundaria: "DM Sans", system-ui, Arial, sans-serif;
+    --fuente-titulos: "Cormorant Garamond", Georgia, serif;
+    --fuente-decorativa: "Zeyada", cursive;
+}
+
+/* Se aplica a todos los elementos. */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Estilos generales del documento. */
+
+body {
+    margin: 0;
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+h2,
+h3 {
+    font-family: var(--fuente-secundaria);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h2 {
+    color: var(--color-principal);
+}
+
+p {
+    margin-top: 0;
+}
+
+/* Estilo de la frase decorativa. */
+
+.frasedestacada {
+    font-family: var(--fuente-decorativa);
+    font-weight: 400;
+}
+
+legend,
+dt {
+    font-family: var(--fuente-secundaria);
+    font-weight: 600;
+}
+
+/* Misma fuente para los campos y botones. */
+
+input,
+select,
+textarea,
+button {
+    font-family: var(--fuente-principal);
+}
+
+/* Títulos principales de las páginas. */
+
+main>h1 {
+    margin: 45px 20px;
+    color: var(--color-principalosc);
+    text-align: center;
+    font-size: 48px;
+}
+
+
+/* 2. CABECERA Y NAVEGACIÓN */
+/* Logotipo y enlaces para moverse entre páginas. */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 15px 5%;
+    background-color: var(--color-fondo2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Coloca el logotipo junto al nombre de la cafetería. */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-principal);
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    width: 70px;
+    height: auto;
+}
+
+.logo span {
+    font-family: var(--fuente-secundaria);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Organiza los enlaces del menú. */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px 18px;
+    color: var(--color-principal);
+    font-family: var(--fuente-principal);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cambia el color al pasar el ratón o seleccionar una página. */
+
+nav a:hover,
+nav a.activo {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+
+/* 3. PIE DE PÁGINA */
+/* Información final y enlaces de la web. */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 35px 5%;
+    background-color: var(--color-fondo2);
+    color: var(--color-principal);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Nombre de la cafetería en el pie de página. */
+
+.nombre-footer {
+    font-family: var(--fuente-secundaria);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Estilo de los enlaces. */
+
+footer a {
+    color: var(--color-principal);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+/* Texto de licencias y derechos de autor. */
+
+.licencias {
+    max-width: 700px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.copyright {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+
+/* 4. PÁGINA DE INICIO */
+/* Portada, presentación y galería. */
+
+/* Imagen principal de la portada. */
+
+.portada {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    height: 70vh;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+/* Añade una capa oscura sobre la imagen. */
+
+.portada::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.45));
+}
+
+.portada>img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Coloca el texto centrado sobre la portada. */
+
+.texto-portada {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    color: var(--color-blanco);
+    text-align: center;
+}
+
+.texto-portada h1 {
+    margin: 0 0 15px;
+    font-size: 76px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.texto-portada p {
+    margin: 0;
+    font-size: 21px;
+}
+
+/* Tarjetas que presentan la esencia de la cafetería. */
+
+.esencia {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.esencia h2,
+.vistazo h2 {
+    margin-top: 0;
+    font-size: 30px;
+}
+
+/* Organiza las cuatro tarjetas en columnas. */
+
+.tarjetas-esencia {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 0;
+    margin: 35px 0 0;
+    list-style: none;
+}
+
+.tarjetas-esencia li {
+    padding: 30px 20px;
+    background-color: var(--color-acento2);
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Eleva ligeramente las tarjetas al pasar el ratón. */
+
+.tarjetas-esencia li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tarjetas-esencia h3 {
+    margin: 0 0 15px;
+    color: var(--color-texto);
+}
+
+.tarjetas-esencia p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Galería de imágenes y vídeos. */
+
+.vistazo {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.vistazo h2 {
+    padding: 0 20px;
+}
+
+/* Distribuye los elementos de la galería en dos columnas. */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.elemento-galeria {
+    overflow: hidden;
+    background-color: var(--color-fondo);
+}
+
+.video-barista video {
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+}
+
+/* Texto que acompaña a cada imagen o vídeo. */
+
+.elemento-galeria p {
+    margin: 0;
+    padding: 14px 10px;
+    color: var(--color-principal);
+    font-family: var(--fuente-secundaria);
+    font-weight: 500;
+}
+
+
+/* 5. PÁGINA DE INFORMACIÓN */
+/* Presentación, ubicación, vídeos y preguntas. */
+
+/* Contenedor principal de la página. */
+
+.pagina-info {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* Estilos de las diferentes secciones. */
+
+.seccion-info {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 55px;
+}
+
+.seccion-info h2 {
+    margin-bottom: 18px;
+    font-size: 28px;
+    text-align: left;
+}
+
+.seccion-info p,
+.seccion-info li {
+    line-height: 1.8;
+}
+
+/* Organiza los datos de ubicación y horario. */
+
+.datos-visita {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    padding: 25px;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.datos-visita h3 {
+    color: var(--color-principal);
+}
+
+.datos-visita ul {
+    padding-left: 20px;
+}
+
+/* Coloca los vídeos en dos columnas. */
+
+.videos-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.videos-info video {
+    display: block;
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    background-color: #000000;
+    object-fit: cover;
+}
+
+/* Ajusta el vídeo de elaboración del café. */
+
+.elaboracion video {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    max-height: 420px;
+    margin: 25px auto;
+    border-radius: 12px;
+    background-color: #000000;
+}
+
+.elaboracion ol {
+    padding-left: 25px;
+}
+
+/* Estilos de las preguntas frecuentes. */
+
+.preguntas dl {
+    margin: 0;
+}
+
+.preguntas dt {
+    padding: 18px 0 8px;
+    color: var(--color-principal);
+    border-top: 1px dotted var(--color-acento);
+}
+
+.preguntas dd {
+    margin: 0;
+    padding: 0 0 18px;
+}
+
+/* Ajusta el vídeo externo de YouTube. */
+
+.video-externo {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 25px auto 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.video-externo iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* 6. PÁGINA DE CONTACTO */
+/* Datos de contacto y formulario. */
+
+/* Contenedor principal de la página. */
+
+.pagina-contacto {
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+/* Texto inicial de presentación. */
+
+.introduccion-contacto {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+/* Coloca los datos y el formulario en dos columnas. */
+
+.contenido-contacto {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 35px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Estilo de las tarjetas de datos y formulario. */
+
+.datos-contacto,
+.formulario-contacto {
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.datos-contacto h2,
+.formulario-contacto h2 {
+    margin-top: 0;
+    color: var(--color-principal);
+}
+
+.datos-contacto a {
+    color: var(--color-principal);
+}
+
+/* Ajusta la lista de horarios. */
+
+.horario-contacto {
+    padding-left: 20px;
+}
+
+/* Organiza los elementos del formulario en vertical. */
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formulario-contacto fieldset {
+    padding: 20px;
+    border: 1px dashed var(--color-acento);
+    border-radius: 10px;
+}
+
+.formulario-contacto legend {
+    padding: 0 8px;
+    color: var(--color-principal);
+}
+
+/* Estilos de los campos de texto y selección. */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b9b9b9;
+    border-radius: 7px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-size: 15px;
+}
+
+/* Organiza las opciones de radio y casillas. */
+
+.opcion-formulario {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.opcion-formulario input {
+    margin-top: 5px;
+}
+
+.opcion-formulario label {
+    line-height: 1.5;
+}
+
+.privacidad {
+    margin: 0;
+}
+
+/* Estilo del botón de enviar. */
+
+.formulario-contacto button {
+    align-self: flex-start;
+    padding: 13px 25px;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.formulario-contacto button:hover {
+    background-color: var(--color-acento);
+    transform: translateY(-2px);
+}
+
+
+/* 7. PÁGINA DE CARTA */
+/* Productos, imágenes, precios y tabla de packs. */
+
+/* Contenedor de las secciones de productos. */
+
+.carta {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+.carta h2 {
+    margin-bottom: 25px;
+    color: var(--color-principal);
+    font-size: 28px;
+    text-align: left;
+}
+
+/* Organiza los productos en una cuadrícula. */
+
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 300px;
+    grid-auto-flow: dense;
+    gap: 15px;
+}
+
+/* Estilo general de las tarjetas de productos. */
+
+.tarjeta {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+/* Cambia el tamaño y posición de algunas tarjetas. */
+
+.tarjeta:first-child {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.tarjeta:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.tarjeta:nth-child(3):last-child {
+    grid-column: span 2;
+}
+
+/* Ajusta las imágenes de los productos. */
+
+.tarjeta .imagenproducto {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Coloca los textos encima de las imágenes. */
+
+.tarjeta h3,
+.tarjeta p,
+.tarjeta .precio,
+.tarjeta .etiqueta {
+    position: absolute;
+    z-index: 2;
+}
+
+.tarjeta h3 {
+    right: 20px;
+    bottom: 65px;
+    left: 20px;
+    margin: 0;
+    color: var(--color-blanco);
+    font-size: 20px;
+    text-align: left;
+}
+
+.tarjeta p {
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    color: var(--color-blanco);
+    font-size: 13px;
+    text-align: left;
+}
+
+/* Muestra el precio en una etiqueta. */
+
+.tarjeta .precio {
+    top: 15px;
+    right: 15px;
+    padding: 9px 14px;
+    border-radius: 20px;
+    background-color: var(--color-tarjeta);
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+/* Etiqueta que identifica los productos nuevos. */
+
+.tarjeta .etiqueta {
+    top: 15px;
+    left: 15px;
+    padding: 7px 13px;
+    border-radius: 20px;
+    background-color: var(--color-acento);
+    color: var(--color-blanco);
+    font-size: 12px;
+}
+
+/* Oscurece las imágenes para facilitar la lectura del texto. */
+
+.tarjeta::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.08) 70%);
+}
+
+/* Tabla de packs y productos. */
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.carta table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-blanco);
+}
+
+.carta caption {
+    padding: 12px;
+    color: var(--color-principal);
+    font-family: var(--fuente-secundaria);
+    font-weight: 600;
+}
+
+.carta th,
+.carta td {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-secundario);
+    text-align: center;
+}
+
+.carta th {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+.carta td img {
+    width: 100px;
+    height: 90px;
+}
+
+
+/* 8. ANIMACIONES Y EFECTOS */
+/* Efectos de entrada y movimiento. */
+
+/* Hace que los elementos aparezcan desde abajo. */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hace que la etiqueta Nuevo aumente y reduzca su tamaño. */
+
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aplica la animación de entrada al cargar la página. */
+
+.portada,
+.esencia,
+.vistazo,
+.pagina-contacto>h1,
+.introduccion-contacto,
+.datos-contacto,
+.formulario-contacto {
+    animation: aparecer 0.8s ease both;
+}
+
+/* Mantiene el movimiento de la etiqueta Nuevo. */
+
+.tarjeta .etiqueta {
+    animation: latido 1.8s ease-in-out infinite;
+}
+
+/* Muestra un contorno al seleccionar enlaces y campos. */
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 3px;
+}
+
+
+/* 9. ADAPTACIÓN A TABLETS */
+/* Cambios para pantallas de hasta 900 píxeles. */
+
+@media (max-width: 900px) {
+
+    /* Coloca la cabecera en vertical. */
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Muestra las tarjetas en dos columnas. */
+
+    .tarjetas-esencia {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Coloca el formulario debajo de los datos. */
+
+    .contenido-contacto {
+        grid-template-columns: 1fr;
+    }
+
+    /* Muestra los productos en dos columnas. */
+
+    .rejilla {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 200px;
+    }
+
+    .tarjeta:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .tarjeta:nth-child(4),
+    .tarjeta:nth-child(3):last-child {
+        grid-column: span 2;
+    }
+}
+
+
+/* 10. ADAPTACIÓN A MÓVILES */
+/* Cambios para pantallas de hasta 600 píxeles. */
+
+@media (max-width: 600px) {
+
+    /* Ajusta la cabecera y el menú. */
+
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo img {
+        width: 58px;
+    }
+
+    nav {
+        width: 100%;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 9px 11px;
+        font-size: 14px;
+    }
+
+    /* Reduce el tamaño de los títulos. */
+
+    main>h1 {
+        margin: 35px 15px;
+        font-size: 38px;
+    }
+
+    /* Ajusta la altura de la portada. */
+
+    .portada {
+        min-height: 380px;
+        height: 60vh;
+    }
+
+    .texto-portada h1 {
+        font-size: 48px;
+    }
+
+    .texto-portada p {
+        font-size: 16px;
+    }
+
+    /* Coloca las tarjetas de inicio en una columna. */
+
+    .esencia {
+        padding: 45px 20px;
+    }
+
+    .tarjetas-esencia {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Muestra la galería en una columna. */
+
+    .vistazo {
+        padding: 40px 0;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajusta la información y los datos de visita. */
+
+    .datos-visita {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .seccion-info {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    .seccion-info h2 {
+        font-size: 24px;
+    }
+
+    /* Reduce el tamaño de la tabla. */
+
+    .carta th,
+    .carta td {
+        padding: 10px 7px;
+        font-size: 14px;
+    }
+
+    .carta td img {
+        width: 80px;
+    }
+
+    /* Reduce el espacio de las tarjetas de contacto. */
+
+    .datos-contacto,
+    .formulario-contacto {
+        padding: 22px 18px;
+    }
+
+    .contenido-contacto {
+        width: 90%;
+        gap: 25px;
+    }
+
+    /* Muestra los productos en una sola columna. */
+
+    .rejilla {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 280px;
+    }
+
+    .tarjeta:first-child,
+    .tarjeta:nth-child(4),
+    .tarjeta:nth-child(3):last-child {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .carta {
+        width: 90%;
+    }
+
+    /* Coloca los vídeos uno debajo del otro. */
+
+    .videos-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajusta el espacio del pie de página. */
+
+    footer {
+        padding: 30px 20px;
+    }
+}
+
+
+/* 11. ADAPTACIÓN A MÓVILES PEQUEÑOS */
+/* Cambios para pantallas de hasta 360 píxeles. */
+
+@media (max-width: 360px) {
+
+    /* Reduce el tamaño de los enlaces del menú. */
+
+    nav a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    /* Reduce los textos de la portada. */
+
+    .texto-portada h1 {
+        font-size: 40px;
+    }
+
+    .texto-portada p {
+        font-size: 14px;
+    }
+
+    /* Reduce el espacio interior del formulario. */
+
+    .formulario-contacto fieldset {
+        padding: 14px;
+    }
+}
+
+
+/* 12. REDUCCIÓN DE MOVIMIENTO */
+/* Desactiva animaciones para quien lo necesite. */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portada,
+    .esencia,
+    .vistazo,
+    .pagina-contacto>h1,
+    .introduccion-contacto,
+    .datos-contacto,
+    .formulario-contacto,
+    .tarjeta .etiqueta {
+        animation: none;
+        transition: none;
+    }
+}
