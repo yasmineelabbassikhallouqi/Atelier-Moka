@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rss version="2.0">
     <channel>
-
         <title>Noticias de Atelier Moka</title>
-        <link>index.html</link>
+        <link>https://yasmineelabbassikhallouqi.github.io/Atelier-Moka/</link>
         <description>Descubre las novedades de nuestra cafetería.</description>
         <language>es-es</language>
 
         <item>
             <title>Descubre nuestro Matcha frío</title>
             <description>Una bebida cremosa y refrescante que ya puedes encontrar en nuestra carta.</description>
-            <link>carta.html</link>
+            <link>https://yasmineelabbassikhallouqi.github.io/Atelier-Moka/carta.html</link>
             <pubDate>Thu, 05 Nov 2026 10:00:00 +0100</pubDate>
         </item>
 
         <item>
             <title>Una nueva selección de dulces</title>
             <description>Hemos incorporado nuevas opciones de repostería para acompañar tu café favorito.</description>
-            <link>carta.html</link>
+            <link>https://yasmineelabbassikhallouqi.github.io/Atelier-Moka/carta.html</link>
             <pubDate>Tue, 03 Nov 2026 10:00:00 +0100</pubDate>
         </item>
 
         <item>
             <title>Bienvenidos a Atelier Moka</title>
-            <description>Conoce nuestro espacio y nuestra filosofía: disfrutar de los pequeños momentos sin prisa.</description>
-            <link>info.html</link>
+            <description>Descubre qué puedes encontrar en Atelier Moka.</description>
+            <link>https://yasmineelabbassikhallouqi.github.io/Atelier-Moka/info.html</link>
             <pubDate>Sun, 01 Nov 2026 10:00:00 +0100</pubDate>
         </item>
-
     </channel>
 </rss>
+
 

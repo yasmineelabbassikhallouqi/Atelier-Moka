@@ -4,22 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Atelier Moka | Contacto</title>
+
     <meta name="description"
-        content="Contacta con Atelier Moka para resolver tus dudas o consultar información sobre nuestra cafetería.">
+        content="Contacta con Atelier Moka para resolver dudas, consultar nuestros productos o solicitar una reserva.">
+
     <link rel="icon" href="favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Noticias de Atelier Moka" href="noticias.xml">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Zeyada&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@500;600&family=Manrope:wght@400;500;700&family=Zeyada&display=swap"
+        rel="stylesheet">ss
+
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
+    <!-- CABECERA Y NAVEGACIÓN -->
     <header>
         <a href="index.html" class="logo">
-            <img src="imagenes/logo.png" alt="Logotipo de Atelier Moka" width="100">
+            <img src="imagenes/logosvg.svg" alt="Logotipo de Atelier Moka">
             <span>Atelier Moka</span>
         </a>
 
@@ -31,101 +40,111 @@
         </nav>
     </header>
 
-    <main>
+    <main class="pagina-contacto">
 
         <h1>Contacta con nosotros</h1>
+        <p class="introduccion-contacto">Estamos aquí para ayudarte. Si tienes alguna duda, quieres realizar una
+            consulta o necesitas más información, estaremos encantados de atenderte.</p>
 
-        <p>¿Tienes alguna pregunta o quieres consultar algo sobre nuestra carta? Estaremos encantados de ayudarte.</p>
+        <div class="contenido-contacto">
 
-        <section>
-            <h2>Nuestros datos de contacto</h2>
+            <!-- DATOS DE CONTACTO -->
+            <section class="datos-contacto">
+                <h2>Nuestros datos de contacto</h2>
+                <div>
+                    <p><strong>Dirección:</strong> Avenida del Café, 12, Estepona, Málaga</p>
+                    <p><strong>Teléfono:</strong> <a href="tel:600123456">600 123 456</a></p>
+                    <p><strong>Correo electrónico:</strong> <a
+                            href="mailto:hola@ateliermoka.example">hola@ateliermoka.example</a></p>
+                </div>
 
-            <p><strong>Dirección:</strong> Avenida del Café, 12, Estepona, Málaga.</p>
+                <h3>Horario de apertura</h3>
+                <ul class="horario-contacto">
+                    <li>Lunes a viernes: 8:00 - 19:00</li>
+                    <li>Sábados: 9:00 - 20:00</li>
+                    <li>Domingos: 9:00 - 14:00</li>
+                </ul>
 
-            <p><strong>Teléfono:</strong> 600 123 456.</p>
+                <p>Los datos de contacto y la dirección son ficticios y forman parte de este proyecto educativo.</p>
+            </section>
 
-            <p><strong>Correo electrónico:</strong> hola@ateliermoka.example.</p>
+            <!-- FORMULARIO DE CONTACTO -->
+            <section class="formulario-contacto">
+                <h2>Envíanos un mensaje</h2>
+                <form action="contacto.html" method="get">
 
-            <h3>Horario de atención</h3>
+                    <fieldset>
+                        <legend>Tus datos</legend>
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="campo">
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </div>
+                        <div class="campo">
+                            <label for="personas">Número de personas:</label>
+                            <input type="number" id="personas" name="personas" min="1" max="20">
+                        </div>
+                    </fieldset>
 
-            <p>De lunes a viernes: de 8:00 a 19:00.</p>
-            <p>Sábados: de 9:00 a 20:00.</p>
-            <p>Domingos: de 9:00 a 14:00.</p>
+                    <fieldset>
+                        <legend>Motivo del mensaje</legend>
+                        <div class="campo">
+                            <label for="motivo">Selecciona un motivo:</label>
+                            <select id="motivo" name="motivo" required>
+                                <option value="">Elige una opción</option>
+                                <option value="consulta">Consulta</option>
+                                <option value="reserva">Reserva</option>
+                                <option value="productos">Información sobre productos</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </fieldset>
 
-            <p class="aviso">Los datos de contacto y la dirección son ficticios y se utilizan únicamente para este
-                proyecto educativo.</p>
-        </section>
+                    <fieldset>
+                        <legend>¿Cómo prefieres que te contactemos?</legend>
+                        <div class="opcion-formulario">
+                            <input type="radio" id="respuesta-correo" name="respuesta" value="correo" required>
+                            <label for="respuesta-correo">Por correo electrónico</label>
+                        </div>
+                        <div class="opcion-formulario">
+                            <input type="radio" id="respuesta-telefono" name="respuesta" value="telefono">
+                            <label for="respuesta-telefono">Por teléfono</label>
+                        </div>
+                        <div class="campo campo-telefono">
+                            <label for="telefono">Teléfono de contacto (opcional):</label>
+                            <input type="text" id="telefono" name="telefono">
+                        </div>
+                    </fieldset>
 
-        <section>
-            <h2>Envíanos un mensaje</h2>
+                    <div class="opcion-formulario privacidad">
+                        <input type="checkbox" id="privacidad" name="privacidad" value="acepto" required>
+                        <label for="privacidad">Acepto el tratamiento de mis datos para responder a mi consulta.</label>
+                    </div>
 
-            <form action="contacto.html" method="get">
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </section>
 
-                <fieldset>
-                    <legend>Tus datos</legend>
-
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-
-                    <label for="correo">Correo electrónico:</label>
-                    <input type="email" id="correo" name="correo" required>
-
-                    <label for="personas">Número de personas:</label>
-                    <input type="number" id="personas" name="personas" min="1" max="20">
-                </fieldset>
-
-                <fieldset>
-                    <legend>Motivo de contacto</legend>
-
-                    <label for="motivo">¿Sobre qué quieres consultarnos?</label>
-
-                    <select id="motivo" name="motivo" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="consulta">Consulta general</option>
-                        <option value="reserva">Reserva</option>
-                        <option value="productos">Información sobre productos</option>
-                        <option value="otro">Otro motivo</option>
-                    </select>
-                </fieldset>
-
-                <fieldset>
-                    <legend>¿Cómo prefieres que te respondamos?</legend>
-
-                    <input type="radio" id="respuesta-correo" name="respuesta" value="correo" required>
-                    <label for="respuesta-correo">Por correo electrónico</label>
-
-                    <input type="radio" id="respuesta-telefono" name="respuesta" value="telefono">
-                    <label for="respuesta-telefono">Por teléfono</label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Tu mensaje</legend>
-
-                    <label for="mensaje">Escribe tu mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                </fieldset>
-
-                <p>
-                    <input type="checkbox" id="privacidad" name="privacidad" value="acepto" required>
-                    <label for="privacidad">Acepto el uso de mis datos para responder a mi consulta.</label>
-                </p>
-
-                <button type="submit">Enviar mensaje</button>
-
-            </form>
-        </section>
-
+        </div>
     </main>
 
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>Atelier Moka · El placer de ir sin prisa</p>
+        <p class="nombre-footer">Atelier Moka · El placer de ir sin prisa</p>
         <p>Estepona, Málaga</p>
-
-        <p>
-            <a href="noticias.xml">Consultar noticias RSS</a>
+        <p class="licencias">
+            Fotografías obtenidas de
+            <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a>
+            y utilizadas bajo la
+            <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">Licencia de Pexels</a>.
         </p>
-
-        <p>© 2026 Atelier Moka. Proyecto educativo.</p>
+        <p><a href="noticias.xml">Consultar noticias RSS</a></p>
+        <p><a href="https://github.com/yasmineelabbassikhallouqi/Atelier-Moka" target="_blank" rel="noopener">Consultar
+                repositorio en GitHub</a></p>
+        <p class="copyright">© 2026 Atelier Moka.</p>
     </footer>
 
 </body>

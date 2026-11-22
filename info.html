@@ -4,21 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Atelier Moka | Información</title>
-    <meta name="description" content="Descubre el espacio y las propuestas de Atelier Moka">
+
+    <meta name="description"
+        content="Conoce la filosofía, el espacio y la forma de preparar el café en Atelier Moka, en Estepona.">
+
     <link rel="icon" href="favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Noticias de Atelier Moka" href="noticias.xml">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&family=Zeyada&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Sans:wght@500;600&family=Manrope:wght@400;500;700&family=Zeyada&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
+    <!-- CABECERA Y NAVEGACIÓN -->
     <header>
         <a href="index.html" class="logo">
-            <img src="imagenes/logo.png" alt="Logotipo de Atelier Moka" width="100">
+            <img src="imagenes/logosvg.svg" alt="Logotipo de Atelier Moka">
             <span>Atelier Moka</span>
         </a>
 
@@ -30,164 +40,110 @@
         </nav>
     </header>
 
-
-    <main>
+    <main class="pagina-info">
 
         <h1>Conoce Atelier Moka</h1>
 
-        <section>
+        <!-- PRESENTACIÓN -->
+        <section class="seccion-info">
             <h2>Una cafetería para compartir</h2>
-
-            <p>Un espacio donde el café, la repostería y las personas son los protagonistas</p>
+            <p>Atelier Moka es un rincón acogedor en el que disfrutar del café, de algo dulce y de los pequeños momentos
+                del día sin necesidad de mirar el reloj.</p>
         </section>
 
-        <section>
+        <!-- FILOSOFÍA V1V2 -->
+        <section class="seccion-info">
             <h2>Así se vive Atelier Moka</h2>
+            <p>Queremos ofrecer un espacio tranquilo y agradable, donde cada visita sea una oportunidad para
+                desconectar, conversar y disfrutar de productos preparados con cuidado.</p>
 
-            <p>Detrás de cada visita hay conversaciones, sonrisas y pequeños momentos que crean la experiencia</p>
-
-            <div class="video">
-                <video autoplay muted loop controls width="300" poster="imagenes/posterp2.png">
+            <div class="videos-info">
+                <video autoplay muted loop controls poster="imagenes/posterp2.png">
                     <source src="videos/p2.mp4" type="video/mp4">
                     Tu navegador no puede reproducir este vídeo.
                 </video>
-            </div>
-
-            <div class="video">
-                <video autoplay muted loop controls width="300" poster="imagenes/posterp3.png">
+                <video autoplay muted loop controls poster="imagenes/posterp3.png">
                     <source src="videos/p3.mp4" type="video/mp4">
                     Tu navegador no puede reproducir este vídeo.
                 </video>
             </div>
-
         </section>
 
-        <section>
+        <!-- UBICACIÓN Y HORARIO -->
+        <section class="seccion-info">
             <h2>Visítanos</h2>
-
-            <p>Estamos en el centro de Estepona, Málaga.</p>
-
-            <p class="aviso">La dirección es ficticia y forma parte de este proyecto educativo: Avenida del Café,
-                12, Estepona, Málaga.</p>
-
-            <h3>Horario</h3>
-
-            <p>De lunes a viernes: 8:00 - 19:00.</p>
-            <p>Sábados: 9:00 - 20:00.</p>
-            <p>Domingos: 9:00 - 14:00.</p>
-        </section>
-
-        <section>
-            <h2>Combina y disfruta</h2>
-
-            <p>Estas son algunas de nuestras combinaciones:</p>
-
-            <table>
-                <caption>Algunos de nuestros packs</caption>
-
-                <thead>
-                    <tr>
-                        <th>Pack</th>
-                        <th>Incluye</th>
-                        <th>Precio</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="imagenes/pack1.jpg" alt="Pack desayuno con café y tostada" width="150">
-                            <p>Desayuno</p>
-                        </td>
-                        <td>Café y tostada</td>
-                        <td>5,50 €</td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <img src="imagenes/pack2.jpg" alt="Pack momento dulce con café y porción de tarta"
-                                width="150">
-                            <p>Momento dulce</p>
-                        </td>
-                        <td>Café y porción de tarta</td>
-                        <td>6,00 €</td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <img src="imagenes/pack3.jpg" alt="Pack merienda con bebida y croissant" width="150">
-                            <p>Merienda</p>
-                        </td>
-                        <td>Bebida y croissant</td>
-                        <td>5,00 €</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section>
-            <h2>Elaboramos cada café con cuidado</h2>
-            <div class="video">
-                <video autoplay muted loop controls width="300" poster="imagenes/posterp1.png">
-                    <source src="videos/p1.mp4" type="video/mp4">
-                    Tu navegador no puede reproducir este vídeo.
-                </video>
+            <div class="datos-visita">
+                <div>
+                    <h3>Dónde estamos</h3>
+                    <p>Avenida del Café, 12, Estepona, Málaga</p>
+                </div>
+                <div>
+                    <h3>Horario</h3>
+                    <ul>
+                        <li>Lunes a viernes: 8:00 - 19:00</li>
+                        <li>Sábados: 9:00 - 20:00</li>
+                        <li>Domingos: 9:00 - 14:00</li>
+                    </ul>
+                </div>
             </div>
+        </section>
 
+        <!-- ELABORACIÓN DEL CAFÉ V3 -->
+        <section class="seccion-info">
+            <h2>Elaboramos cada café con cuidado</h2>
+            <p>Detrás de cada taza hay pequeños pasos que ayudan a conseguir un buen resultado.</p>
+            <video controls poster="imagenes/posterp1.png">
+                <source src="videos/p1.mp4" type="video/mp4">
+                Tu navegador no puede reproducir este vídeo.
+            </video>
             <ol>
-                <li>Seleccionamos el café.</li>
-                <li>Preparamos la cantidad adecuada.</li>
-                <li>Servimos la bebida.</li>
+                <li>Seleccionamos y preparamos el café.</li>
+                <li>Controlamos la extracción para conseguir su aroma.</li>
+                <li>Preparamos y servimos la bebida con cuidado.</li>
             </ol>
         </section>
 
-        <section>
+        <!-- PREGUNTAS FRECUENTES -->
+        <section class="seccion-info">
             <h2>Preguntas frecuentes</h2>
-
             <dl>
-                <dt>¿Tenéis opciones de leche vegetal?</dt>
-                <dd>Sí, ofrecemos bebida de avena y de soja.</dd>
-
-                <dt>¿Se pueden pedir productos para llevar?</dt>
-                <dd>Sí, puedes pedir bebidas y productos para llevar.</dd>
-
-                <dt>¿Es necesario reservar?</dt>
-                <dd>No es obligatorio, pero puedes contactar con nosotros para consultar disponibilidad.</dd>
+                <dt>¿Disponéis de leche vegetal?</dt>
+                <dd>Sí, contamos con alternativas como bebida de avena y bebida de soja.</dd>
+                <dt>¿Puedo pedir para llevar?</dt>
+                <dd>Sí, puedes solicitar tus bebidas y productos para llevar.</dd>
+                <dt>¿Se pueden realizar reservas?</dt>
+                <dd>Puedes ponerte en contacto con nosotros para consultar la disponibilidad.</dd>
             </dl>
         </section>
 
-        <section>
+        <!-- VÍDEO YOUTUBE-->
+        <section class="seccion-info">
             <h2>El café también tiene su técnica</h2>
-
-            <p>Descubre cómo se prepara un buen café en este vídeo</p>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ijDe9Jga-qs?si=lZn2or6rklR7-j6F"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Descubre más sobre la preparación del café con este vídeo.</p>
+            <div class="video-externo">
+                <iframe src="https://www.youtube.com/embed/ijDe9Jga-qs?si=lZn2or6rklR7-j6F"
+                    title="Vídeo sobre la preparación del café"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
 
     </main>
 
-
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <p>Atelier Moka · El placer de ir sin prisa</p>
+        <p class="nombre-footer">Atelier Moka · El placer de ir sin prisa</p>
         <p>Estepona, Málaga</p>
-
-        <p>
+        <p class="licencias">
             Fotografías obtenidas de
             <a href="https://www.pexels.com/" target="_blank" rel="noopener">Pexels</a>
             y utilizadas bajo la
-            <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">Licencia de Pexels</a>
-
+            <a href="https://www.pexels.com/license/" target="_blank" rel="noopener">Licencia de Pexels</a>.
         </p>
-
-
-        <p>
-            <a href="noticias.xml">Consultar noticias RSS</a>
-        </p>
-
-        <p>© 2026 Atelier Moka. Proyecto educativo.</p>
+        <p><a href="noticias.xml">Consultar noticias RSS</a></p>
+        <p><a href="https://github.com/yasmineelabbassikhallouqi/Atelier-Moka" target="_blank" rel="noopener">Consultar
+                repositorio en GitHub</a></p>
+        <p class="copyright">© 2026 Atelier Moka.</p>
     </footer>
 
 </body>
